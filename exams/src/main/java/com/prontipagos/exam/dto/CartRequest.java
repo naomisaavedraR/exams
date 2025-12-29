@@ -1,9 +1,17 @@
 package com.prontipagos.exam.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotNull;
+
+@Schema(name = "CartRequest", description = "Request to upload a product to the cart")
 public class CartRequest {
 
+	@Schema(description = "name of the product", example = "apple")
+	@NotNull
 	private String name;
 
+	@Schema(description = "price of the product", example = "500.00")
+	@NotNull
 	private Long price;
 
 	public CartRequest() {
