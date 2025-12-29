@@ -1,3 +1,8 @@
+/** Classname: CartServiceImpl 
+* Author: Naomi Saavedra
+* Date: 2025/12/29 
+* © Concepto Móvil S.A. de C.V. 
+*/
 package com.prontipagos.exam.services.impl;
 
 import java.util.Map;
@@ -8,6 +13,11 @@ import com.prontipagos.exam.exception.ProntipagosException;
 import com.prontipagos.exam.repository.CartSingleton;
 import com.prontipagos.exam.services.CartService;
 
+/** 
+* class to define cart service
+* @author: Naomi Saavedra
+* @version: 1.0 * 
+*/
 @Service
 public class CartServiceImpl implements CartService {
 

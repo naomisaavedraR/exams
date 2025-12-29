@@ -1,3 +1,8 @@
+/** Classname: PasswordController 
+* Author: Naomi Saavedra
+* Date: 2025/12/29 
+* © Concepto Móvil S.A. de C.V. 
+*/
 package com.prontipagos.exam.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +25,26 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
+/** 
+* class to define password controller
+* @author: Naomi Saavedra
+* @version: 1.0 * 
+*/
 @RequestMapping("v1/password")
 @RestController
 @Tag(name = "Password Controller", description = "controller to validate a password")
 public class PasswordController {
 
+	/**
+	 * PasswordService passwordService
+	 */
 	@Autowired
 	private PasswordService passwordService;
 
+	/**
+	 * @param password
+	 * @return  ResponseEntity<ResponseItem<Boolean>>
+	 */
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@Operation(summary = "ejecute a validation of a password",
 	description = "validate if a password fulfill various conditions")

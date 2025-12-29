@@ -1,3 +1,8 @@
+/** Classname: PalindromeController 
+* Author: Naomi Saavedra
+* Date: 2025/12/29 
+* © Concepto Móvil S.A. de C.V. 
+*/
 package com.prontipagos.exam.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +25,26 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
+/** 
+* class to define palindrome controller
+* @author: Naomi Saavedra
+* @version: 1.0 * 
+*/
 @RequestMapping("v1/palindrome")
 @RestController
 @Tag(name = "Palindrome Controller", description = "controller to validate a palindrome's word")
 public class PalindromeController {
 
+	/**
+	 * PalindromeService palindromeService
+	 */
 	@Autowired
 	private PalindromeService palindromeService;
 
+	/**
+	 * @param word
+	 * @return ResponseEntity<ResponseItem<Boolean>>
+	 */
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@Operation(summary = "ejecute a validation of a word", description = "validate if a word is a palindrome")
 	@ApiResponse(responseCode = "200", description = "success, the response is encapsulated in a response item",

@@ -1,3 +1,8 @@
+/** Classname: ThreadSafeServiceImpl 
+* Author: Naomi Saavedra
+* Date: 2025/12/29 
+* © Concepto Móvil S.A. de C.V. 
+*/
 package com.prontipagos.exam.services.impl;
 
 import java.util.concurrent.ExecutorService;
@@ -9,6 +14,11 @@ import org.springframework.stereotype.Service;
 import com.prontipagos.exam.exception.ProntipagosException;
 import com.prontipagos.exam.services.ThreadSafeService;
 
+/** 
+* class to define thread service
+* @author: Naomi Saavedra
+* @version: 1.0 * 
+*/
 @Service
 public class ThreadSafeServiceImpl implements ThreadSafeService {
 

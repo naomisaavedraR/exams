@@ -1,3 +1,8 @@
+/** Classname: ThreadController 
+* Author: Naomi Saavedra
+* Date: 2025/12/29 
+* © Concepto Móvil S.A. de C.V. 
+*/
 package com.prontipagos.exam.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,14 +26,26 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+/** 
+* class to define thread controller
+* @author: Naomi Saavedra
+* @version: 1.0 * 
+*/
 @RequestMapping("v1/thread")
 @RestController
 @Tag(name = "Thread Controller", description = "controller to manage threads")
 public class ThreadController {
 
+	/**
+	 * ThreadSafeService threadSafeService
+	 */
 	@Autowired
 	private ThreadSafeService threadSafeService;
 
+	/**
+	 * @param cycles
+	 * @return ResponseEntity<ResponseItem<Long>>
+	 */
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@Operation(summary = "ejecute two threads with opposite operations",
 			description = "sum and substract n cycles of a number to the same variable.")

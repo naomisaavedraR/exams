@@ -1,9 +1,24 @@
+/** Classname: ResponseItem 
+* Author: Naomi Saavedra
+* Date: 2025/12/29 
+* © Concepto Móvil S.A. de C.V. 
+*/
 package com.prontipagos.exam.response;
+
+import java.io.Serializable;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
+/** 
+* class to define the generic TO response
+* @author: Naomi Saavedra
+* @version: 1.0 * 
+*/
 @Schema(name = "ResponseItem", description = "Generic object of response")
-public class ResponseItem<T> {
+public class ResponseItem<T> implements Serializable {
+	
+	/** Class serial version UID */
+	private static final long serialVersionUID = 1L;
 
 	@Schema(description = "response message of the server")
 	private String message;

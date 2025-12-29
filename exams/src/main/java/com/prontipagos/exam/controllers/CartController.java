@@ -1,3 +1,8 @@
+/** Classname: CartController 
+* Author: Naomi Saavedra
+* Date: 2025/12/29 
+* © Concepto Móvil S.A. de C.V. 
+*/
 package com.prontipagos.exam.controllers;
 
 import java.util.Map;
@@ -24,14 +29,26 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
+/** 
+* class to define cart controller
+* @author: Naomi Saavedra
+* @version: 1.0 * 
+*/
 @RequestMapping("v1/cart")
 @RestController
 @Tag(name = "Cart Controller", description = "controller to update a cart")
 public class CartController {
 
+	/**
+	 * CartService cartService
+	 */
 	@Autowired
 	private CartService cartService;
 
+	/**
+	 * @param cartRequest
+	 * @return ResponseEntity<ResponseItem<Boolean>>
+	 */
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	@Operation(summary = "update an item", description = "add a product with name and price to the cart")
 	@ApiResponse(responseCode = "200", description = "success, the response is encapsulated in a response item",
@@ -63,6 +80,9 @@ public class CartController {
 		return ResponseEntity.ok(response);
 	}
 
+	/**
+	 * @return ResponseEntity<ResponseItem<Map<String, Long>>>
+	 */
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@Operation(summary = "get the cart", description = "get a map with all the items in a cart")
 	@ApiResponse(responseCode = "200", description = "success, the response is encapsulated in a response item",

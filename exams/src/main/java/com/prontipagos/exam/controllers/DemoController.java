@@ -1,3 +1,8 @@
+/** Classname: DemoController 
+* Author: Naomi Saavedra
+* Date: 2025/12/29 
+* © Concepto Móvil S.A. de C.V. 
+*/
 package com.prontipagos.exam.controllers;
 
 import org.slf4j.Logger;
@@ -22,6 +27,11 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
+/** 
+* class to define demo controller
+* @author: Naomi Saavedra
+* @version: 1.0 * 
+*/
 @RestController
 @RequestMapping("v1/demo")
 @Tag(name = "Demo Controller", description = "controller to show the usage of swagger")
@@ -30,9 +40,16 @@ public class DemoController {
 	/* Logger Object */
 	private static final Logger LOG = LoggerFactory.getLogger(DemoController.class);
 
+	/**
+	 * DemoService demoService
+	 */
 	@Autowired
 	private DemoService demoService;
 
+	/**
+	 * @param request
+	 * @return ResponseEntity<ResponseItem<DemoTO>>
+	 */
 	@GetMapping(consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
 	@Operation(summary = "get the sound of a platypus",
 			description = "validate if the animal is a platypus and return the sound")

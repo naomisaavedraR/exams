@@ -1,3 +1,8 @@
+/** Classname: CounterController 
+* Author: Naomi Saavedra
+* Date: 2025/12/29 
+* © Concepto Móvil S.A. de C.V. 
+*/
 package com.prontipagos.exam.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +25,26 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
+/** 
+* class to define count controller
+* @author: Naomi Saavedra
+* @version: 1.0 * 
+*/
 @RequestMapping("v1/counter")
 @RestController
 @Tag(name = "Count Controller", description = "controller to count sentences")
 public class CounterController {
 
+	/**
+	 * CounterService counterService
+	 */
 	@Autowired
 	private CounterService counterService;
 
+	/**
+	 * @param sentence
+	 * @return ResponseEntity<ResponseItem<Integer>>
+	 */
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@Operation(summary = "count words", description = "count the quantity of words in a sentence")
 	@ApiResponse(responseCode = "200", description = "success, the response is encapsulated in a response item",
