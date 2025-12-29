@@ -61,7 +61,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/v1/thread?cycles=100000000000000",
+					"raw": "{{baseUrl}}/v1/thread?cycles=100000000",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -72,7 +72,7 @@
 					"query": [
 						{
 							"key": "cycles",
-							"value": "100000000000000"
+							"value": "100000000"
 						}
 					]
 				}
@@ -143,6 +143,79 @@
 					"path": [
 						"v1",
 						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Demo Service",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Perry\",\r\n    \"age\":3,\r\n    \"platypus\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/demo",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"demo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger html",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/swagger-ui/index.html",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"swagger-ui",
+						"index.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger json api",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Perry\",\r\n    \"age\":3,\r\n    \"platypus\":false\r\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v3/api-docs",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v3",
+						"api-docs"
 					]
 				}
 			},
