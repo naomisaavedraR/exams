@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "9ef6bac6-568d-4d83-a5b0-f8711c1145b1",
+		"name": "exam collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51106898",
+		"_collection_link": "https://naomisaavedrar-266009.postman.co/workspace/Naomi-Saavedra's-Workspace~1ac85e58-626e-4bef-84bf-58d7b5a44cac/collection/51106898-9ef6bac6-568d-4d83-a5b0-f8711c1145b1?action=share&source=collection_link&creator=51106898"
+	},
+	"item": [
+		{
+			"name": "Counter Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/counter?sentence=hola soy un  dinosaurio   as",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"counter"
+					],
+					"query": [
+						{
+							"key": "sentence",
+							"value": "hola soy un  dinosaurio   as"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Palindrome Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/palindrome?word=ana",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"palindrome"
+					],
+					"query": [
+						{
+							"key": "word",
+							"value": "ana"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thread service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/thread?cycles=100000000000000",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"thread"
+					],
+					"query": [
+						{
+							"key": "cycles",
+							"value": "100000000000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Password Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/password?password=Hola213123412*",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"password"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "Hola213123412*"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/cart",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fill cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"ensalada\",\r\n    \"price\":100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/cart",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": ""
+		}
+	]
+}
